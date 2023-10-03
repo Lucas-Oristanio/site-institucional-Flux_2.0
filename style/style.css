@@ -1,5 +1,5 @@
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 *{
     margin: 0;
@@ -37,6 +37,12 @@ h1{
     align-items: center;
     justify-content: space-around;
 }
+.cor1{
+    color: #fff;
+}
+.cor2{
+    color: #1A3850;
+}
 
 .header .logo{
     display: flex;
@@ -55,7 +61,6 @@ h1{
 
 .header .links a{
     text-decoration: none;
-    color: #fff;
     font-size: 17px;
     font-weight: 700;
     letter-spacing: 3px;
@@ -92,6 +97,10 @@ h1{
     padding: 14px 70px;
     border-radius: 50px;
 }
+.conteudo .icon a{
+    border: none;
+    cursor: pointer;
+}
 
 .back-video{
     position: absolute; /* Para o video ficar atrás dos outros elementos */
@@ -104,12 +113,6 @@ h1{
     color: #fff;
     font-weight: 800;
     margin-top: 20px;
-}
-
-.icon button{
-    background: transparent;
-    border: none;
-    cursor: pointer;
 }
 
 /* SOBRE NOS */
