@@ -36,6 +36,8 @@ h1{
     display: flex;
     align-items: center;
     justify-content: space-around;
+    background-color: #ffffff15;
+    backdrop-filter: blur(4px);
 }
 .cor1{
     color: #fff;
@@ -64,6 +66,13 @@ h1{
     font-size: 17px;
     font-weight: 700;
     letter-spacing: 3px;
+    border-bottom: solid 2px transparent;
+    transition: 0.4s;
+}
+
+.header .links a:hover{
+    border-width: 0 100%;
+    border-bottom-color:#fff;
 }
 
 .conteudo{
@@ -72,7 +81,7 @@ h1{
 }
 
 .conteudo h1{
-    font-size: 120px;
+    font-size: 90px;
     font-weight: 700;
     font-family: 'Poppins', sans-serif;
     font-family: 'Young Serif', serif; 
@@ -84,18 +93,22 @@ h1{
     margin-bottom: 50px;
     font-size: 24px;
     color: #FFF;
-    font-weight: 700;
+    font-weight: 400;
     font-family: 'Poppins', sans-serif;
     font-family: 'Young Serif', serif; 
 }
 
-.conteudo a{
+.conteudo .btn{
     text-decoration: none;
     color: #FFF;
     font-size: 24px;
     border: 2px solid #fff;
     padding: 14px 70px;
     border-radius: 50px;
+    transition: 0.5s;
+}
+.conteudo .btn:hover{
+    background-color: #ffffff3d;
 }
 .conteudo .icon a{
     border: none;
