@@ -100,49 +100,92 @@
 
 <script>
 
-window.addEventListener('scroll', () => {
-    const scrollY = window.scrollY;
+    window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY; // Pega a posição atual que o usuário está na tela
+        const pageHeight = document.documentElement.scrollHeight;  // Pega a altura total da janela
     
-    // Define a cor do texto com base na posição da página
-    if (scrollY > 920 && scrollY < 1840) {
-        header.innerHTML = `<div class="logo">
-                                <img src="imgs/logo/Logo_Projeto_Flux-4.png" alt="" width="65px">
-                                <h1 class="cor2">FLUX</h1>
-                            </div>
-                            
-                            <div class="links">
-                                <li><a class="cor2" href="#home">HOME</a></li>
-                                <li><a class="cor2" href="#sobre">SOBRE NÓS</a></li>
-                                <li><a class="cor2" href="#equipe">EQUIPE</a></li>
-                                <li><a class="cor2" href="#">CONTATO</a></li>
-                            </div>
-                    `
-    } else if (scrollY < 920) {
-        header.innerHTML = `<div class="logo">
-                                <img src="imgs/logo/logo-transp.png" alt="" width="65px">
-                                <h1 >FLUX</h1>
-                            </div>
-                            
-                            <div class="links">
-                                <li><a class="cor1" href="#home">HOME</a></li>
-                                <li><a class="cor1" href="#sobre">SOBRE NÓS</a></li>
-                                <li><a class="cor1" href="#equipe">EQUIPE</a></li>
-                                <li><a class="cor1" href="#">CONTATO</a></li>
-                            </div>
-                    `
-    } else{
-        header.innerHTML = `<div class="logo">
-                                <img src="imgs/logo/logo-transp.png" alt="" width="65px">
-                                <h1 >FLUX</h1>
-                            </div>
-                            
-                            <div class="links">
-                                <li><a class="cor1" href="#home">HOME</a></li>
-                                <li><a class="cor1" href="#sobre">SOBRE NÓS</a></li>
-                                <li><a class="cor1" href="#equipe">EQUIPE</a></li>
-                                <li><a class="cor1" href="#">CONTATO</a></li>
-                            </div>
-                    `
-    }
-});
-</script>
+        const scrollPercentage = (scrollY / pageHeight) * 100; // Define em porcentagem em qual parte o usuário está na tela
+        
+        // Define a cor do texto com base na posição da página
+        if(scrollPercentage < 31){
+            header.innerHTML = `<div class="logo">
+                                    <img src="imgs/logo/logo-transp.png" alt="" width="65px">
+                                    <h1 >FLUX</h1>
+                                </div>
+                                
+                                <div class="links">
+                                    <li><a class="cor1" href="#home">HOME</a></li>
+                                    <li><a class="cor1" href="#sobre">SOBRE NÓS</a></li>
+                                    <li><a class="cor1" href="#equipe">EQUIPE</a></li>
+                                    <li><a class="cor1" href="#">CONTATO</a></li>
+                                </div>
+                        `
+        }else if(scrollPercentage < 64){
+            header.innerHTML = `<div class="logo">
+                                    <img src="imgs/logo/Logo_Projeto_Flux-4.png" alt="" width="65px">
+                                    <h1 class="cor2">FLUX</h1>
+                                </div>
+                                
+                                <div class="links">
+                                    <li><a class="cor2" href="#home">HOME</a></li>
+                                    <li><a class="cor2" href="#sobre">SOBRE NÓS</a></li>
+                                    <li><a class="cor2" href="#equipe">EQUIPE</a></li>
+                                    <li><a class="cor2" href="#">CONTATO</a></li>
+                                </div>
+                        `
+        }else{
+            header.innerHTML = `<div class="logo">
+                                    <img src="imgs/logo/logo-transp.png" alt="" width="65px">
+                                    <h1 >FLUX</h1>
+                                </div>
+                                
+                                <div class="links">
+                                    <li><a class="cor1" href="#home">HOME</a></li>
+                                    <li><a class="cor1" href="#sobre">SOBRE NÓS</a></li>
+                                    <li><a class="cor1" href="#equipe">EQUIPE</a></li>
+                                    <li><a class="cor1" href="#">CONTATO</a></li>
+                                </div>
+                        `
+        }
+        // if(scrollY < 620){
+        //     header.innerHTML = `<div class="logo">
+        //                             <img src="imgs/logo/logo-transp.png" alt="" width="65px">
+        //                             <h1 >FLUX</h1>
+        //                         </div>
+                                
+        //                         <div class="links">
+        //                             <li><a class="cor1" href="#home">HOME</a></li>
+        //                             <li><a class="cor1" href="#sobre">SOBRE NÓS</a></li>
+        //                             <li><a class="cor1" href="#equipe">EQUIPE</a></li>
+        //                             <li><a class="cor1" href="#">CONTATO</a></li>
+        //                         </div>
+        //                 `
+        // }else if(scrollY < 1200){
+        //     header.innerHTML = `<div class="logo">
+        //                             <img src="imgs/logo/Logo_Projeto_Flux-4.png" alt="" width="65px">
+        //                             <h1 class="cor2">FLUX</h1>
+        //                         </div>
+                                
+        //                         <div class="links">
+        //                             <li><a class="cor2" href="#home">HOME</a></li>
+        //                             <li><a class="cor2" href="#sobre">SOBRE NÓS</a></li>
+        //                             <li><a class="cor2" href="#equipe">EQUIPE</a></li>
+        //                             <li><a class="cor2" href="#">CONTATO</a></li>
+        //                         </div>
+        //                 `
+        // }else{
+        //     header.innerHTML = `<div class="logo">
+        //                             <img src="imgs/logo/logo-transp.png" alt="" width="65px">
+        //                             <h1 >FLUX</h1>
+        //                         </div>
+                                
+        //                         <div class="links">
+        //                             <li><a class="cor1" href="#home">HOME</a></li>
+        //                             <li><a class="cor1" href="#sobre">SOBRE NÓS</a></li>
+        //                             <li><a class="cor1" href="#equipe">EQUIPE</a></li>
+        //                             <li><a class="cor1" href="#">CONTATO</a></li>
+        //                         </div>
+        //                 `
+        // }
+    });
+    </script>
