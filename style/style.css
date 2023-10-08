@@ -286,6 +286,81 @@ h1{
     width: 100%;
     height: 50vh;
     background-color: rgb(238, 237, 237);
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.titulo-contato{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 15%;
+    align-items: center;
+}
+
+.titulo-contato h1{
+    color: #1A3850;
+
+}
+
+.l-contato{
+    display: flex;
+    width: 90%;
+    height: 80%;
+}
+
+.l-contato .card-contato{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.card-contato p{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.card-contato img{
+    margin-bottom: 20px;
+}
+
+.formulario input,.formulario button{
+    width: 250px;
+    height: 40px;
+    border-radius: 10px; 
+    border: solid #1A3850 2px;  
+    margin-top: 10px;
+}
+.formulario button{
+    background-color: #1A3850;
+    color: #fff;
+}
+
+.formulario button:hover{
+    cursor: pointer;
+}
+.formulario h3{
+    margin-bottom: 15px;
+}
+.formulario a{
+    color: #1A3850;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+/* Footer */
+
+.footer{
+    display: flex;
+    width: 100%;
+    height: 15vh;
+    background-color: #1A3850;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px;
 }
