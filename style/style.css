@@ -53,7 +53,7 @@ h1{
 }
 
 .header .links{
-    width: 500px;
+    width: 35vw;
     height: 75px;
     display: flex;
     justify-content: space-between;
@@ -222,6 +222,83 @@ h1{
     transition: 0.5s;
 }
 
+/* Calculadora */
+
+.calculadora{
+    display: flex;
+    width: 100%;
+    height: 70vh;
+    background-color: rgb(238, 237, 237);
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+}
+.calculadora .calc-titulo{
+    font-size: 32px;
+    color: #1A3850;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Young Serif', serif;  
+    align-items: center;
+    text-shadow: 1px 1px 6px #222;
+}
+.calculadora .container-calculadora{
+    width: 70%;
+    height: 100%;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+.container-calculadora .col1-calc{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
+.col1-calc span{
+    font-size: 26px;
+}
+.container-calculadora .col1-calc input{
+    width: 300px;
+    height: 40px;
+    border-radius: 10px;
+    border: #1A3850 solid 2px;
+    margin-bottom: 20px;
+    padding: 15px;
+    font-size: 22px;
+}
+.col1-calc button{
+    width: 300px;
+    height: 40px;
+    border-radius: 10px;
+    border: solid 2px black;
+    background-color: #1A3850;
+    color: #FFF;
+    font-size: 20px;
+    text-shadow: 2px 2px #222;
+}
+.col1-calc button:hover{
+    box-shadow: 2px 2px 6px black;
+    cursor: pointer;
+}
+
+.container-calculadora .col2-calc{
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    height: 60%;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5%;
+}
+.col2-calc span{
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: black;
+    padding: 5px;
+}
 /* EQUIPE */
 
 .equipe{
@@ -284,7 +361,7 @@ h1{
 .contato{
     display: flex;
     width: 100%;
-    height: 50vh;
+    height: 70vh;
     background-color: rgb(238, 237, 237);
     justify-content: space-between;
     align-items: center;
@@ -328,12 +405,23 @@ h1{
     margin-bottom: 20px;
 }
 
-.formulario input,.formulario button{
+.formulario .inp-autor,.inp-email,.formulario button{
     width: 250px;
     height: 40px;
     border-radius: 10px; 
     border: solid #1A3850 2px;  
     margin-top: 10px;
+}
+.formulario .inp-assunto{
+    width: 250px;
+    height: 80px;
+    border-radius: 10px; 
+    border: solid #1A3850 2px;  
+    margin-top: 10px;
+}
+.formulario input{
+    padding: 5px;
+    font-size: 16px;
 }
 .formulario button{
     background-color: #1A3850;
@@ -350,6 +438,12 @@ h1{
     color: #1A3850;
     font-size: 18px;
     text-decoration: none;
+}
+
+textarea{
+    padding: 10px;
+    resize: vertical;
+    font-size: 16px;
 }
 
 /* Footer */
